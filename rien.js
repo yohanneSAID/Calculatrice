@@ -108,37 +108,36 @@ return resulat;*****************************************************************
   return indicePlus2;
 }*/
 function WTF() {
-    let valeur = '24+5';
-    let premierChiffre = '';
-    let deuxiemeChiffre = '';
-    let indicePlus = 0;
-    //Determination du '+'
-    for (let i = 0; i < valeur.length; i++) {
-        if (valeur[i] == '+') {
-            indicePlus = i;
-            break;
-        }
+  let valeur = '24+5';
+  let premierChiffre = '';
+  let deuxiemeChiffre = '';
+  let indicePlus = 0;
+  //Determination du '+'
+  for (let i = 0; i < valeur.length; i++) {
+    if (valeur[i] == '+') {
+      indicePlus = i;
+      break;
     }
+  }
 
-    //Determination du premier nombre
-    for (let j = 0; j < indicePlus; j++) {
-        premierChiffre = premierChiffre + valeur[j];
+  //Determination du premier nombre
+  for (let j = 0; j < indicePlus; j++) {
+    premierChiffre = premierChiffre + valeur[j];
+  }
 
-    }
-
-    //Détermination du deuxième nombre:
-    for (let e = indicePlus + 1; e < valeur.length; e++) {
-        deuxiemeChiffre = deuxiemeChiffre + valeur[e];
-    }
-    let resulat = parseInt(premierChiffre) + parseInt(deuxiemeChiffre);
-    return resulat;
+  //Détermination du deuxième nombre:
+  for (let e = indicePlus + 1; e < valeur.length; e++) {
+    deuxiemeChiffre = deuxiemeChiffre + valeur[e];
+  }
+  let resulat = parseInt(premierChiffre) + parseInt(deuxiemeChiffre);
+  return resulat;
 }
 
 export default function App() {
-    return (
-        <View style={styles.container}>
-            <Text> le résultat est {WTF()} </Text>
-            <StatusBar style="auto" />
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <Text> le résultat est {WTF()} </Text>
+      <StatusBar style="auto" />
+    </View>
+  );
 }

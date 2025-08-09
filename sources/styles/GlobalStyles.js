@@ -1,0 +1,181 @@
+import { StyleSheet, Dimensions } from 'react-native';
+import { mesCouleurs } from './Couleurs';
+
+const { width, height } = Dimensions.get('window');
+
+export const Styles = StyleSheet.create({
+    container: {
+        width: width,
+        height: height,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+    },
+
+    //======================================= MODE SOMBRE
+    calculSombre: {
+        height: 150,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        padding: 20,
+        marginBottom: 20,
+    },
+    AffichageCalculSombre: {
+        color: 'white',
+        fontSize: 30,
+        maxWidth: '100%',
+        flexShrink: 1,
+    },
+    resultatSombre: {
+        color: mesCouleurs.org,
+        fontSize: 40,
+        maxWidth: '100%',
+        flexShrink: 1,
+    },
+    cadreSombre: {
+        top: 20,
+        position: 'absolute',
+        width: '114%',
+        height: '130%',
+        backgroundColor: mesCouleurs.sombreCadre,
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        paddingRight: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 5,
+        elevation: 6,
+        borderWidth: 1,
+        borderColor: mesCouleurs.sombreBordure,
+    },
+    buttonSombre: {
+        width: 70,
+        height: 67,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: mesCouleurs.sombreBouton,
+        borderRadius: 20,
+        borderWidth: 1.5,
+        borderColor: mesCouleurs.sombreBordureBoutton,
+        shadowColor: '#000',
+        shadowOffset: { width: 2, height: 8 },
+        shadowOpacity: 0.9,
+        shadowRadius: 6,
+        elevation: 10,
+    },
+    buttonTextSombre: {
+        color: mesCouleurs.clairTexte,
+        fontSize: 28,
+        fontWeight: '500',
+    },
+    operatorText: {
+        color: mesCouleurs.org,
+        fontSize: 28,
+        fontWeight: '500',
+    },
+    egalBtn: {
+        width: 64.5,
+        height: 140,
+        backgroundColor: mesCouleurs.orange,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 25,
+        marginBottom: 5,
+        marginLeft: 19,
+        shadowColor: mesCouleurs.sombre,
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.5,
+        shadowRadius: 6,
+        elevation: 12,
+    },
+    egalText: {
+        color: 'black',
+        fontSize: 35,
+        fontWeight: 'bold',
+    },
+
+    //======================================= MODE CLAIR
+    calculClair: {
+        height: 150,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        padding: 20,
+        marginBottom: 20,
+    },
+    AffichageCalculClair: {
+        color: mesCouleurs.AffichageCalculClair1,
+        fontSize: 30,
+        maxWidth: '100%',
+        flexShrink: 1,
+    },
+    resultatClair: {
+        color: mesCouleurs.org,
+        fontSize: 40,
+        maxWidth: '100%',
+        flexShrink: 1,
+    },
+    cadreClair: {
+        top: 20,
+        position: 'absolute',
+        width: '114%',
+        height: '130%',
+        backgroundColor: mesCouleurs.clairCadre,
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        paddingRight: 10,
+        shadowColor: '#AAA',
+        shadowOffset: { width: 2, height: 5 },
+        shadowOpacity: 0.19,
+        shadowRadius: 6,
+        elevation: 7,
+        borderWidth: 1,
+        borderColor: mesCouleurs.clairBordure,
+    },
+    buttonClair: {
+        width: 70,
+        height: 67,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: mesCouleurs.clairBouton,
+        borderRadius: 20,
+        borderWidth: 1.5,
+        borderColor: mesCouleurs.clairBordureBoutton,
+        shadowColor: '#CCC',
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.25,
+        shadowRadius: 5,
+        elevation: 10,
+    },
+    buttonTextClair: {
+        color: '#3C3C3C',
+        fontSize: 28,
+        fontWeight: '500',
+    },
+
+    //======================================= STRUCTURE
+    lastRowsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 1,
+    },
+    leftColumn: {
+        flex: 1,
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 12,
+        top: 5,
+    },
+    subRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        gap: 4, // fonctionne à partir de React Native 0.71+
+        marginBottom: 7.8,
+        marginTop: 2.9,
+        left: -0.8,
+    },
+
+});
